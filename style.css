@@ -1,0 +1,88 @@
+*{
+    font-family: Montserrat ;
+    font-style: normal; 
+     font-weight: normal; 
+     
+}
+h1{
+    text-align: center;
+    
+    
+}
+.cont{
+    background-color: dodgerblue;
+    border-radius: 4px;
+    width: 200px;
+    height: 40px;
+    margin: 20px 95px;
+    
+    
+}
+.ic{
+    width: 40px;
+    height: 40px;
+    border: black 1px solid;
+    border-radius: 100%;
+    padding: 10px;
+    float: right;
+    margin-right: 2%;
+    margin-left: auto; 
+    margin-right:auto;
+    
+}
+.ic:hover{
+background-color: cadetblue;
+color: white;
+}
+
+i{
+    display: flex;
+    color: red;
+    padding: 20px;
+    background: transparent;
+    font-size: 20px;
+    border-radius: 100%;
+    align-items: center;
+    padding: 10px 10px 29px 10px;
+    
+}
+.iconsall{
+    display: flex;
+}
+.block1-left{
+    width: 400px;
+    height: 600px;
+    border-radius: 2%;
+    align-items: center;
+}
+.block2-right{
+    
+    width: 400px;
+    height: 600px;
+    border-radius: 2%;
+    background-color: deepskyblue;
+}
+.all{
+    display: flex;
+    margin-left: 250px;
+    
+}
+body{
+    background-color: cornsilk;
+}
+.hello{
+    color: white;
+}
+.button{
+    width: 140px;
+    height: 50px;
+    border-radius: 10%;
+    background-color: rgb(216, 231, 0) ;
+    margin: 20px 55px;
+}
+p{
+    text-align: center;
+}
+.all2{
+    padding: 80px;
+}

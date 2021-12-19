@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <title>Contact Form</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_OKKGggsXiswsfhLIMaT44');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_lc1dbki', 'template_ohfg2o2', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="all">
+        <div class="block1-left">
+            
+            <div class="cont2"><h1>Contact Us</h1></div>
+            <div class="icons">
+                <div class="iconsall">
+                    <div class="ic">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="ic">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="ic">
+                        <i class="fab fa-accessible-icon"></i>
+                    </div>
+                </div>
+            </div>
+                <p class="text1">or use our contact below</p>
+            <form id="contact-form">
+                <input type="hidden" name="contact_number">
+                <input type="email" placeholder="E-Mail" name="reply_to">
+                <input type="text" placeholder="Phone">
+                <h1>Type your message here</h1>
+                <textarea cols="40px" rows="5px" name="message"></textarea>
+                <p>Need additional help?</p>
+                <button class="cont" name=" message" type="submit">Contact us</button>
+            </form>
+
+        </div>
+        <div class="block2-right">
+            <div class="all2">
+            <h1 class="hello">Hello User</h1>
+            <p>if you want to know more info about</p>
+            <p>our project than</p>
+         <button class="button">Contact us</button>
+            </div>
+        </div>
+
+            
+    </div>
+    
+</body>
+</html>
